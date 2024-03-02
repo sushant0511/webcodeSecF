@@ -22,7 +22,8 @@
 </thead>
 <tbody>
 <%
-
+String username=session.getAttribute("uname").toString();
+out.println("Welcome "+username);
 try
 {
 Class.forName("com.mysql.cj.jdbc.Driver");  // exception
@@ -52,13 +53,18 @@ catch (Exception e) {
 
 </tbody>
 </table>
-<form action="">
+<form action="Buy">
 Enter Product Id <input type="text" name="pid"><br>
 quantity <input type="text" name="quan"><br>
 <input type="submit" value="Buy">  
 </form>
 </body>
 </html>
+
+
+
+
+
 
 
 
